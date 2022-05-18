@@ -1,2 +1,2 @@
-# nanpython.github.io
+# NaNPython
 All things Python
