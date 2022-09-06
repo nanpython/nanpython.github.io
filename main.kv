@@ -1,0 +1,40 @@
+#:kivy 2.1.0
+<POS>:
+    input_text: input_text
+    out_label: out_label
+
+    FloatLayout:
+        height: "350dp"
+        size_hint_y: None
+
+        Label:
+            id: out_label
+            text: "Enter a sentence."
+            background_color: 0, 0, 1, 1
+            pos_hint: {"x":0, "top":1.0}
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+        
+        TextInput:
+            id: input_text
+            background_color: 0, 0, 1, 1
+            size_hint: 0.5, 0.2
+            pos_hint: {"x":0, "top":0.9}
+    
+            
+        Button:
+            text:"Submit"
+            background_color: 0.4, 0.5, 0.6, 1
+            size_hint: 0.3, 0.2
+            pos: 50, 70
+            on_press: root.submit_btn()
+
+        Label:
+            id: out_label
+            text:"Output here"
+            background_color: 0, 0, 1, 1
+            pos_hint: {"x":0.6, "top":1.0}
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
